@@ -1,40 +1,35 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../img/logo.png";
-import { FaSearch } from "react-icons/fa";
+
 import { FaRegHeart } from "react-icons/fa";
 import { TiShoppingCart } from "react-icons/ti";
 import "./header.css";
 import { CartContext } from "../context/CartContext";
+import SearchBox from "./SearchBox";
 
 const TopHeader = () => {
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, favorite } = useContext(CartContext);
   return (
     <div className="top_header">
       <div className="container">
         <Link to="/" className="logo">
           <img src={Logo} alt="Logo"></img>
         </Link>
-        <form className="search_box">
-          <input
-            type="text"
-            name="search"
-            id="search"
-            placeholder="Search For Products"
-          />
-          <button type="submit">
-            <FaSearch />
-          </button>
-        </form>
+        <SearchBox />
         <div className="header_icons">
           <div className="icon">
-            <FaRegHeart />
-            <span className="count">0</span>
+            <Link to="/favorite">
+              {" "}
+              <FaRegHeart />
+              <span className="count">{favorite.length}</span>
+            </Link>
           </div>
           <div className="icon">
-            <TiShoppingCart />
-
-            <span className="count">{cartItems.length}</span>
+            <Link to="/cart">
+              <TiShoppingCart />
+              <span className="count">{cartItems.length}</span>
+            </Link>
           </div>
         </div>
       </div>

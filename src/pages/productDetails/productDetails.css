@@ -94,8 +94,14 @@
   font-size: 16px;
   border-radius: 2px;
   padding: 12px 15px;
+  border: 1px solid var(--main_color);
 }
 
+.item_details .details_item .btn.in_cart {
+  background: transparent;
+  color: var(--main_color);
+  pointer-events: none;
+}
 .item_details .details_item .btn svg {
   font-size: 20px;
 }
@@ -120,6 +126,12 @@
   transition: 0.3s;
 }
 
+.item_details .details_item .icons span.in-fav {
+  background-color: var(--main_color);
+}
+.item_details .details_item .icons span.in-fav svg {
+  fill: wheat;
+}
 .item_details .details_item .icons span:hover {
   background-color: var(--main_color);
 }

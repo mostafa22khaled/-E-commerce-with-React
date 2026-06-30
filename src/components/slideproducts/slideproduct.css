@@ -116,8 +116,16 @@
   cursor: pointer;
 }
 
+.product .icons span.in-fav {
+  background-color: var(--main_color);
+}
+.product .icons span.in-fav svg {
+  fill: var(--white_color);
+}
+
 .product.in_cart .icons .btn_cart {
   background-color: var(--main_color);
+  pointer-events: none;
 }
 
 .product.in_cart .icons .btn_cart svg {

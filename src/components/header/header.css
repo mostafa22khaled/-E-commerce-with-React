@@ -210,3 +210,33 @@ header {
   height: 30px;
   margin-bottom: 10px;
 }
+
+/*search*/
+
+.searchBox_container {
+  position: relative;
+}
+
+.suggestions {
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  border: 1px solid var(--border_color);
+}
+
+.suggestions li {
+  padding: 5px 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-bottom: 1px solid var(--border_color);
+}
+
+.suggestions li span {
+  font-size: 14px;
+  color: var(--main_color);
+}
+
+.suggestions li img {
+  width: 30px;
+}

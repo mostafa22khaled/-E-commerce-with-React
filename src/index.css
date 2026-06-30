@@ -20,6 +20,7 @@
 body {
   background: var(--white_color);
   font-family: "Inter", sans-serif;
+  padding-top: 150px;
 }
 img {
   width: 100%;
@@ -102,4 +103,38 @@ li {
   to {
     background-position: right -40px top 0;
   }
+}
+/*toast*/
+.toast-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 300px;
+  max-width: 300px;
+}
+
+.toast-wrapper img {
+  width: auto;
+  height: 50px;
+  object-fit: cover;
+}
+
+.toast-wrapper .toast-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.toast-wrapper strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.toast-wrapper .btn {
+  margin-top: 5px;
+  font-size: 13px;
 }
